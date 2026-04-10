@@ -1,12 +1,7 @@
 def solution(sizes):
-    sizes = [sorted(x, reverse=True) for x in sizes]
-    
-    frontList = []
-    backList = []
-    
-    for i, j in sizes:
-        frontList.append(i)
-        backList.append(j)
-        
-    
-    return max(frontList) * max(backList)
+    flist = []
+    blist = []
+    for arr in sizes:
+        flist.append(max(arr))
+        blist.append(min(arr))
+    return max(flist) * max(blist)
